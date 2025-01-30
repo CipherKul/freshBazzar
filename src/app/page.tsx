@@ -1,9 +1,8 @@
 import { Button } from "@/components/ui/button";
-import HeroSection from "@/components/ui/Home/Hero";
-import AboutUsSection from "@/components/ui/Home/InfoSection";
-import MidSection from "@/components/ui/Home/MidSection";
-import { ProductGrid } from "@/components/ui/Home/ProductGrid";
-import Image from "next/image";
+import HeroSection from "@/components/Home/Hero";
+import AboutUsSection from "@/components/Home/InfoSection";
+import MidSection from "@/components/Home/MidSection";
+import { ProductGrid } from "@/components/Home/ProductGrid";
 export default function Home() {
   return (
    <>

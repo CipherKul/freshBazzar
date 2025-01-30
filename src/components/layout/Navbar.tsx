@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -10,8 +11,11 @@ import {
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
+  const currentPathName= usePathname()
+  const showSearch = currentPathName === '/'
   return (
     <div className="relative">
       <nav className="bg-white text-black ">
@@ -101,7 +105,7 @@ const Navbar = () => {
       </nav>
 
       {/* Search Container with green bottom border */}
-      <div className="w-full ">
+     {showSearch &&  <div className="w-full ">
         <div className="max-w-[1200px] flex justify-center mx-auto px-4 py-2">
           <div className="relative  w-full md:w-[60%]">
             <Input
@@ -124,7 +128,7 @@ const Navbar = () => {
             </button>
           </div>
         </div>
-      </div>
+      </div>}
     </div>
   );
 };
