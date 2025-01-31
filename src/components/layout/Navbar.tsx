@@ -19,13 +19,13 @@ const Navbar = () => {
   return (
     <div className="relative">
       <nav className="bg-white text-black ">
-        <div className="w-full max-w-[1200px] mx-auto flex justify-between items-center ">
+        <div className="w-full max-w-[1200px] mx-auto flex justify-between items-center">
           {/* Logo */}
           <div className="text-xl font-bold">
             <Image 
               src="/images/logo.png"
               alt="logo"
-              width={120}
+              width={180}
               height={40}
               className="w-auto h-auto"
             />
@@ -93,20 +93,36 @@ const Navbar = () => {
 
           {/* Cart and Login */}
           <div className="flex items-center gap-4">
-            <div className="flex items-center">
-              <ShoppingCart className="h-6 w-6 text-gray-500" />
-              <span className="ml-2 text-gray-500">Cart</span>
+            <div className="flex items-center gap-2">
+             
+              <div className="flex gap-8">
+        <Button  className=" bg-transparant rounded-full hover:bg-green-600 hover:text-black text-black">
+        <Image
+                        src="/images/cart.png" 
+                        alt="Special Products"
+                        width={60}
+                        height={10}
+                        className="object-cover "
+                      />
+        </Button>
+            
             </div>
-            <Button className="hidden md:block bg-green-500 hover:bg-green-600 text-white rounded-full px-6">
+            <Button className="hidden md:block bg-green-500 hover:bg-green-600 text-white rounded-full px-8">
               Login
             </Button>
           </div>
         </div>
+      </div>
       </nav>
 
 {/* Search Container with green bottom border */}
 {showSearch && (
-  <div className="w-full" style={{ backgroundColor: '#D9FCB4' }}>
+  <div className="w-full" style={{
+    backgroundColor: "rgba(217, 252, 180, 0.99)",
+    width: "100%",
+    height: "60px"
+    
+  }}>
     <div className="max-w-[1200px] flex justify-center mx-auto px-4 py-2">
       <div className="relative w-full md:w-[60%]">
         <Input
