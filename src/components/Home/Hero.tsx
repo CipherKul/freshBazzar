@@ -85,18 +85,4 @@ const HeroSection = () => {
 
 export default HeroSection;
 
-// Green chillies are a staple ingredient in many cuisines for their distinctive flavor and heat. These long, slender peppers are known for their bright green color and intense spiciness. With a fresh, crisp texture and a powerful kick, green chillies add depth and complexity to a wide range of dishes.
-
-
-// Benefits:
-// Rich in vitamins A and C
-// Contains capsaicin, which has potential health benefits such as pain relief and improved metabolism
-// Adds depth of flavour and heat to dishes
-// Versatile ingredient used in various cuisines worldwide
-
-
-// Usage:
-// Enhance the flavour of curries, stir-fries, salsas, and sauces
-// Slice or dice for garnishing salads, tacos, and other dishes
-// Infuse olive oil for a spicy kick in dressings and marinades
 

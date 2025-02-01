@@ -18,6 +18,16 @@ const Navbar = () => {
   const showSearch = currentPathName === '/'
   return (
     <div className="relative">
+      
+       <div className="bg-green-900 text-white left-4 text-sm py-2 px-4">
+        <div className="max-w-[1200px] mx-auto flex justify-between ">
+          <div className="flex gap-6">
+            <span>📞 (629) 555-0129 </span>
+            <span> | </span>
+            <span>✉️ PRNKinfo@company.com</span>
+          </div>
+        </div>
+      </div>
       <nav className="bg-white text-black ">
         <div className="w-full max-w-[1200px] mx-auto flex justify-between items-center">
           {/* Logo */}

@@ -3,8 +3,8 @@ import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 
 // Images from the public folder
-const img1 = "/images/kiwi.jpg";
-const img2 = "/images/broccoli.jpg";
+const img1 = "/images/kiwi1.png";
+const img2 = "/images/broc1.png";
 const img3 = "/images/grapes.jpg";
 const img4 = "/images/banana.jpg";
 const step = "/images/step.png";
