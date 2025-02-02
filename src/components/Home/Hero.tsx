@@ -5,9 +5,7 @@ const HeroSection = () => {
   return (
     <section
       className="relative text-center text-white"
-      style={{
-        boxShadow: "rgba(0, 0, 0, 0.15) 0px 5px 50px",
-      }}
+      
     >
       {/* Background Container */}
       <div 
@@ -15,11 +13,11 @@ const HeroSection = () => {
         style={{
           backgroundColor: "rgba(217, 252, 180, 0.99)",
           width: "100%",
-          height: "550px"
+          height: "40vw"
         }}
       >
         {/* Left Hero Image */}
-        <div className="absolute top-[160px] left-0 w-[45%] z-[2]">
+        <div className="absolute w-[45%] z-[2] h-full mt-[30px]" style={{display:"flex",alignItems:"end"}}>
           <Image
             src="/images/heroLeft.png"
             alt="Left Hero Image"
@@ -31,7 +29,7 @@ const HeroSection = () => {
         </div>
 
         {/* Right Hero Image */}
-        <div className="absolute top-[40px] right-0 w-[45%] z-[2]">
+        <div className="absolute right-0 z-[2] w-[45%] h-full mt-[62px]">
           <Image
             src="/images/heroRight.png"
             alt="Right Hero Image"
@@ -46,7 +44,7 @@ const HeroSection = () => {
         <div className="text-center justify-center inset-0 bg-opacity-50 pt-36">
           <div>
             <h1
-              className="text-4xl font-bold mb-4 text-[60px]"
+                 className="text-4xl font-bold mb-4 text-[60px]"
               style={{
                 textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
                 color: "rgba(17, 80, 29, 1)"
@@ -57,7 +55,7 @@ const HeroSection = () => {
           </div>
           <div>
             <h1
-              className="text-4xl font-bold mb-4 text-[40px]"
+              className="title-M text-4xl font-bold mb-4 text-[40px]"
               style={{
                 textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
                 color: "rgba(17, 80, 29, 1)"
@@ -68,7 +66,7 @@ const HeroSection = () => {
           </div>
           <div>
             <p
-              className="text-lg text-green-600"
+              className="title-L text-lg text-green-600"
               style={{
                 textShadow: "1px 1px 1px rgba(0, 0, 0, 0.5)",
                 color: 'rgba(0, 0, 0, 0.5)'

@@ -1,8 +1,8 @@
-"use client"
-import React from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { Menu, X, ShoppingCart } from 'lucide-react';
+"use client";
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Menu, X, ShoppingCart } from "lucide-react";
 import {
   Sheet,
   SheetContent,
@@ -11,15 +11,14 @@ import {
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { usePathname } from 'next/navigation';
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
-  const currentPathName= usePathname()
-  const showSearch = currentPathName === '/'
+  const currentPathName = usePathname();
+  const showSearch = currentPathName === "/";
   return (
     <div className="relative">
-      
-       <div className="bg-green-900 text-white left-4 text-sm py-2 px-4">
+      <div className="bg-green-900 text-white text-sm py-1 px-4">
         <div className="max-w-[1200px] mx-auto flex justify-between ">
           <div className="flex gap-6">
             <span>📞 (629) 555-0129 </span>
@@ -32,7 +31,7 @@ const Navbar = () => {
         <div className="w-full max-w-[1200px] mx-auto flex justify-between items-center">
           {/* Logo */}
           <div className="text-xl font-bold">
-            <Image 
+            <Image
               src="/images/logo.png"
               alt="logo"
               width={180}
@@ -66,7 +65,10 @@ const Navbar = () => {
                   </Link>
                 </SheetClose>
                 <SheetClose asChild>
-                  <Link href="/contact" className="text-gray-500 hover:underline">
+                  <Link
+                    href="/contact"
+                    className="text-gray-500 hover:underline"
+                  >
                     Contact
                   </Link>
                 </SheetClose>
@@ -102,61 +104,61 @@ const Navbar = () => {
           </ul>
 
           {/* Cart and Login */}
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-2">
-             
+          <div className="flex items-center gap-4 hidden md:block">
+            <div className="flex items-center gap-2 ">
               <div className="flex gap-8">
-        <Button  className=" bg-transparant rounded-full hover:bg-green-600 hover:text-black text-black">
-        <Image
-                        src="/images/cart.png" 
-                        alt="Special Products"
-                        width={60}
-                        height={10}
-                        className="object-cover "
-                      />
-        </Button>
-            
+                <Button className=" bg-transparant rounded-full hover:bg-green-600 hover:text-black text-black">
+                  <Image
+                    src="/images/cart.png"
+                    alt="Special Products"
+                    width={60}
+                    height={10}
+                    className="object-cover "
+                  />
+                </Button>
+              </div>
+              <Button className="hidden md:block bg-green-500 hover:bg-green-600 text-white rounded-full px-8">
+                Login
+              </Button>
             </div>
-            <Button className="hidden md:block bg-green-500 hover:bg-green-600 text-white rounded-full px-8">
-              Login
-            </Button>
           </div>
         </div>
-      </div>
       </nav>
 
-{/* Search Container with green bottom border */}
-{showSearch && (
-  <div className="w-full" style={{
-    backgroundColor: "rgba(217, 252, 180, 0.99)",
-    width: "100%",
-    height: "60px"
-    
-  }}>
-    <div className="max-w-[1200px] flex justify-center mx-auto px-4 py-2">
-      <div className="relative w-full md:w-[60%]">
-        <Input
-          type="search"
-          placeholder="Search..."
-          className="w-full bg-white rounded-full py-5 focus:outline-none focus:ring-2 focus:ring-green-500"
-        />
-        <button className="absolute right-3 top-1/2 transform -translate-y-1/2">
-          <svg
-            className="h-5 w-5 text-gray-400"
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-)}
+      {/* Search Container with green bottom border */}
+      {showSearch && (
+        <div
+          className="w-full"
+          style={{
+            backgroundColor: "rgba(217, 252, 180, 0.99)",
+            width: "100%",
+            height: "60px",
+          }}
+        >
+          <div className="max-w-[1200px] flex justify-center mx-auto px-4 py-2">
+            <div className="relative w-full md:w-[60%]">
+              <Input
+                type="search"
+                placeholder="Search..."
+                className="w-full bg-white rounded-full py-5 focus:outline-none focus:ring-2 focus:ring-green-500"
+              />
+              <button className="absolute right-3 top-1/2 transform -translate-y-1/2">
+                <svg
+                  className="h-5 w-5 text-gray-400"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
