@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 const MidSection = () => {
   return (
     <>
-      <div className="text-center flex justify-center mt-28">
+      <div className="text-center flex justify-center pt-4 sm:pt-2 md:pt-20 mt-20">
         <div>
           <div className="mb-4">
             <button
@@ -16,7 +16,7 @@ const MidSection = () => {
             </button>
           </div>
           <h1
-            className="text-4xl font-bold mb-4 text-[60px]"
+            className="text-4xl font-bold mb-4 md:text-[60px] sm:text-[0px] pt-4 sm:pt-12 md:pt-20"
             style={{
               textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
               color: "rgba(17, 80, 29, 1)",
@@ -31,10 +31,10 @@ const MidSection = () => {
               color: "rgba(17, 80, 29, 1)",
             }}
           >
-            Food Collection
+            food Collection
           </h1>
           <p
-            className="text-lg text-green-600"
+            className="sm:text-small md:text-lg text-green-600"
             style={{
               textShadow: "1px 1px 1px rgba(0, 0, 0, 0.5)",
               color: "rgba(0, 0, 0, 0.5)",
@@ -45,9 +45,94 @@ const MidSection = () => {
         </div>
       </div>
 
-      <section className="bg-transparent flex items-center justify-center mt-8">
+      <section className="bg-transparent flex items-center justify-center mt-8 px-4">
+      {/* Mobile Grid (1 column) and Tablet Grid (2 columns) */}
+      <div className="lg:hidden w-full max-w-4xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {/* Left Box */}
+          <div className="relative bg-white rounded-lg shadow-lg overflow-hidden h-[200px] sm:h-[300px]">
+            <Image
+              src="/images/R1.png"
+              alt="Get Exclusive Discount"
+              width={500}
+              height={500}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute bottom-4 left-4">
+              <div className="bg-[#AFAFAF] text-green-900 px-2 py-1 text-xs sm:text-sm font-semibold rounded-xl w-fit">
+                <button>Upto 50% Off</button>
+              </div>
+              <h3 className="text-white text-xl sm:text-2xl font-extrabold mt-2 leading-tight">Get Exclusive Discount</h3>
+              <p className="text-white text-xs sm:text-sm">Discounts Up to 50% on exotic foods</p>
+            </div>
+          </div>
+
+          {/* Middle Top Box */}
+          <div className="relative bg-grey rounded-lg shadow-lg overflow-hidden h-[200px] sm:h-[300px]">
+            <Image
+              src="/images/U1.png"
+              alt="Special Products"
+              width={500}
+              height={250}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute bottom-4 left-4">
+              <div className="text-black text-xs sm:text-sm font-poppins">
+                SUMMER SALE
+              </div>
+              <h3 className="text-black text-xl sm:text-2xl font-bold font-poppins leading-tight">75% OFF</h3>
+              <p className="text-black font-poppins text-xs sm:text-sm">Only Fruits & Vegetable</p>
+              <div className="text-[#00B207] text-xs sm:text-sm font-poppins font-semibold mt-1">
+                <button>Shop Now →</button>
+              </div>
+            </div>
+          </div>
+
+          {/* Middle Bottom Box */}
+          <div className="relative bg-white rounded-lg shadow-lg overflow-hidden h-[200px] sm:h-[300px]">
+            <Image
+              src="/images/D1.png"
+              alt="Summer Sale"
+              width={500}
+              height={250}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+              <div className="text-white text-xs sm:text-sm font-poppins">
+                Best Deal
+              </div>
+              <h3 className="text-white text-xl sm:text-2xl font-bold font-poppins leading-tight">Special Product</h3>
+              <h3 className="text-white text-xl sm:text-2xl font-bold font-poppins leading-tight">Deal of the Month</h3>
+              <div className="text-[#00B207] text-xs sm:text-sm font-poppins font-semibold mt-2">
+                <button>Shop Now →</button>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Box */}
+          <div className="relative bg-white rounded-lg shadow-lg overflow-hidden h-[200px] sm:h-[300px]">
+            <Image
+              src="/images/L1.png"
+              alt="Explore Recipes"
+              width={500}
+              height={500}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute bottom-4 left-4">
+              <div className="bg-green-200 text-green-900 px-2 py-1 text-xs sm:text-sm font-semibold rounded-xl w-fit">
+                <button>Shop Now!</button>
+              </div>
+              <h3 className="text-white text-xl sm:text-2xl font-extrabold mt-2 leading-tight">Summer</h3>
+              <h3 className="text-white text-xl sm:text-2xl font-extrabold leading-tight">Sale</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Desktop Grid (3 columns) */}
+      <div className="hidden lg:block w-[80%]">
         <div
-          className="grid w-[80%] gap-6 p-6"
+          className="grid gap-6 p-6"
           style={{
             display: "grid",
             gridTemplateAreas: `
@@ -58,7 +143,7 @@ const MidSection = () => {
             gridTemplateRows: "1fr 1fr",
           }}
         >
-          {/* Left Box (L1) */}
+          {/* Left Box */}
           <div className="relative bg-white rounded-lg shadow-lg overflow-hidden" style={{ gridArea: "left" }}>
             <Image
               src="/images/R1.png"
@@ -85,14 +170,13 @@ const MidSection = () => {
               height={250}
               className="object-cover"
             />
-            
             <div className="absolute bottom-28 left-4">
-            <div className=" text-black px-2 py-1 text-sm font-poppins rounded-xl w-fit">
-            SUMMER SALE
-            </div> 
-            <h3 className="text-black text-3xl font-bold font-poppins  leading-tight">75% OFF</h3>
-            <p className="text-black font-poppins text-sm">Only Frruits & Vegetable</p>
-              <div className=" text-[#00B207] px-3 py-2 text-sm font-poppins  font-semibold rounded-xl w-fit">
+              <div className="text-black text-sm font-poppins">
+                SUMMER SALE
+              </div>
+              <h3 className="text-black text-3xl font-bold font-poppins leading-tight">75% OFF</h3>
+              <p className="text-black font-poppins text-sm">Only Fruits & Vegetable</p>
+              <div className="text-[#00B207] text-sm font-poppins font-semibold mt-2">
                 <button>Shop Now →</button>
               </div>
             </div>
@@ -107,19 +191,19 @@ const MidSection = () => {
               height={250}
               className="object-cover"
             />
-            <div className="absolute bottom-0 left-0 w-full h-full flex flex-col items-center justify-center text-center">
-            <div className=" text-white px-2 py-1 text-sm font-poppins rounded-xl">
-            Best Deal
-            </div> 
-            <h3 className="text-white text-2xl font-bold font-poppins  leading-tight">Special Product</h3>
-            <h3 className="text-white text-2xl font-bold font-poppins  leading-tight">Deal of the Month</h3>
-              <div className=" text-[#00B207] px-3 py-2 text-sm font-poppins  font-semibold rounded-xl w-fit">
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
+              <div className="text-white text-sm font-poppins">
+                Best Deal
+              </div>
+              <h3 className="text-white text-2xl font-bold font-poppins leading-tight">Special Product</h3>
+              <h3 className="text-white text-2xl font-bold font-poppins leading-tight">Deal of the Month</h3>
+              <div className="text-[#00B207] text-sm font-poppins font-semibold mt-2">
                 <button>Shop Now →</button>
               </div>
             </div>
           </div>
 
-          {/* Right Box (R1) */}
+          {/* Right Box */}
           <div className="relative bg-white rounded-lg shadow-lg overflow-hidden" style={{ gridArea: "right" }}>
             <Image
               src="/images/L1.png"
@@ -130,14 +214,15 @@ const MidSection = () => {
             />
             <div className="absolute bottom-24 left-6">
               <div className="bg-green-200 text-green-900 px-3 py-2 text-sm font-semibold rounded-xl w-fit">
-                <button>Show Now!</button>
+                <button>Shop Now!</button>
               </div>
               <h3 className="text-white text-3xl font-extrabold mt-2 leading-tight">Summer</h3>
               <h3 className="text-white text-3xl font-extrabold leading-tight">Sale</h3>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
     </>
   );
 };
