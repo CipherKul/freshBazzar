@@ -58,11 +58,11 @@ const ProductCard = ({ product }: { product: Product }) => {
         alt={product.name}
         width={300}
         height={200}
-        className="w-full h-[100px]  object-cover rounded-md"
+        className="w-56 h-36 mx-auto mb-4 object-cover rounded-md"
       />
 
       {/* Product Details */}
-      <h2 className="text-sm font-semibold mt-2 text-center truncate w-full font-poppins ">{product.name}</h2>
+      <h2 className="text-sm font-semibold mt-2 truncate w-full font-poppins ">{product.name}</h2>
       <p className="text-green-600 font-poppins font-bold mt-1">
         ₹{product.price}
       </p>
@@ -77,26 +77,28 @@ export const ProductGrid = () => {
   return (
     <div className="p-4 bg-transparent flex flex-col items-center">
       {/* Header Section */}
-      <div className="flex justify-between text-center whitespace-nowrap w-[80%] mb-20  ">
-        <h1 className="text-3xl font-bold text-center text-[#11501D]">
-          Farm Fresh
-        </h1>
-        <div className="w-full flex items-center justify-end pr-[2%] gap-2">
-          <button className="w-auto bg-gradient-to-t from-[#2A5847] to-[#41780C] text-white max-h-[30px] text-[12px] border-[#41780C] rounded-full px-4 py-1 hover:shadow-md">
-            All
-          </button>
-          <button className="w-auto text-[#11501D] max-h-[30px] text-[12px] border-[#41780C] rounded-full px-4 py-1 hover:shadow-md">
-            Exotic Vegetable
-          </button>
-          <button className="w-auto text-[#11501D] max-h-[30px] text-[12px] border-[#41780C] rounded-full px-4 py-1 hover:shadow-md">
-            Exotic Fruit
-          </button>
-          <ChevronRight className="text-[#11501D] w-3 h-3" />
-        </div>
-      </div>
+      <div className="flex flex-wrap justify-between items-center text-center w-full sm:w-[80%] mb-10 px-2 sm:px-0">
+  {/* Heading */}
+  <h1 className="text-xl sm:text-3xl font-bold text-[#11501D]">Farm Fresh</h1>
+
+  {/* Buttons Section */}
+  <div className="flex flex-wrap items-center justify-end gap-2 mt-2 sm:mt-0">
+    <button className="w-auto bg-gradient-to-t from-[#2A5847] to-[#41780C] text-white text-xs sm:text-sm border-[#41780C] rounded-full px-3 py-1 hover:shadow-md">
+      All
+    </button>
+    <button className="w-auto text-[#11501D] text-xs sm:text-sm border-[#41780C] rounded-full px-3 py-1 hover:shadow-md">
+      Exotic Vegetable
+    </button>
+    <button className="w-auto text-[#11501D] text-xs sm:text-sm border-[#41780C] rounded-full px-3 py-1 hover:shadow-md">
+      Exotic Fruit
+    </button>
+    <ChevronRight className="text-[#11501D] w-4 sm:w-5 h-4 sm:h-5" />
+  </div>
+</div>
+
 
       {/* Product Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-[80%] px-2">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-[80%] px-4">
 
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />

@@ -2,8 +2,9 @@ import React, { JSX } from "react";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Check, Leaf, Truck, RefreshCcw, Tag, Facebook, Instagram, Twitter } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
-// Define the type for the items in the "Why Choose Us" section
+// Define the type for the items in the "Why Choose Us" sion
 interface Feature {
   icon: JSX.Element;
   title: string;
@@ -41,33 +42,30 @@ const AboutUs: React.FC = () => {
   // Team members' data
   const team = [
     {
-      name: "John Doe",
-      position: "CEO & Founder",
-      image: "/images/team1.jpg",
-      social: { facebook: "#", instagram: "#", twitter: "#" },
+      name: "Akash",
+      role: "Delivery Expert",
+      social: ["Twitter", "LinkedIn", "Facebook"],
     },
     {
-      name: "Jane Smith",
-      position: "Marketing Head",
-      image: "/images/team2.jpg",
-      social: { facebook: "#", instagram: "#", twitter: "#" },
+      name: "Vivek Singh",
+      role: "Procurement Manager",
+      social: ["Twitter", "LinkedIn", "Facebook"],
     },
     {
-      name: "Robert Johnson",
-      position: "Lead Developer",
-      image: "/images/team3.jpg",
-      social: { facebook: "#", instagram: "#", twitter: "#" },
+      name: "Pradeep Kumar",
+      role: "Marketing Specialist",
+      social: ["Twitter", "LinkedIn", "Facebook"],
     },
     {
-      name: "Emily Davis",
-      position: "Customer Relations",
-      image: "/images/team4.jpg",
-      social: { facebook: "#", instagram: "#", twitter: "#" },
+      name: "Kaushal Sharma",
+      role: "Customer Service Representative",
+      social: ["Twitter", "LinkedIn", "Facebook"],
     },
-  ];
+  ]
+  
 
   return (
-    <section className="bg-[#f7f6f2] py-16 px-6 md:px-40 text-gray-900">
+    <div className="bg-[#f7f6f2] py-16 px-4 md:px-40 text-gray-900">
       <h2 className="text-3xl md:text-4xl font-bold text-center text-green-800 mb-20">
         About FreshBuyZar
       </h2>
@@ -81,7 +79,7 @@ const AboutUs: React.FC = () => {
             className="rounded-xl shadow-lg"
           />
         </div>
-        <div className="w-full md:w-1/2 space-y-6">
+        <div className="w-full md:w-1/2 space-y-8">
           <h3 className="text-2xl font-poppins font-semibold">Welcome to FreshBuyZar</h3>
           <p className="text-gray-700">
           Discover FreshBuyZar's story, mission, and commitment to providing top-quality products.
@@ -116,75 +114,65 @@ const AboutUs: React.FC = () => {
         ))}
       </div>
 
+     
       {/* Stats Section */}
-      <div className="bg-green-100 mt-16 py-8 text-center grid grid-cols-2 md:grid-cols-4 gap-6 text-green-800 font-semibold text-xl">
-        <div>
-          <p className="text-3xl font-bold">10k+</p>
-          <p>Fresh Deliveries</p>
-        </div>
-        <div>
-          <p className="text-3xl font-bold">234+</p>
-          <p>Produce Varieties</p>
-        </div>
-        <div>
-          <p className="text-3xl font-bold">12+</p>
-          <p>Community Engagements</p>
-        </div>
-        <div>
-          <p className="text-3xl font-bold">110+</p>
-          <p>Seasonal Recipes</p>
+      <div className="relative -mx-6 md:-mx-40 w-[calc(100%+3rem)] md:w-[calc(100%+20rem)] bg-green-100 mt-16">
+        <div className="py-24 md:py-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-green-800 font-semibold text-xl text-center max-w-7xl mx-auto px-6">
+            <div>
+              <p className="text-3xl font-bold">10k+</p>
+              <p>Fresh Deliveries</p>
+            </div>
+            <div>
+              <p className="text-3xl font-bold">234+</p>
+              <p>Produce Varieties</p>
+            </div>
+            <div>
+              <p className="text-3xl font-bold">12+</p>
+              <p>Community Engagements</p>
+            </div>
+            <div>
+              <p className="text-3xl font-bold">110+</p>
+              <p>Seasonal Recipes</p>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* Our Team Section */}
-      <section className="py-16 px-6">
-        <h2 className="text-center text-3xl font-bold text-green-700 mb-12">
-          Our Team
-        </h2>
-        <h2 className="text-center font-semibold text-3xl font-poppins text-gray-900 mb-4">
-          Meet Our FreshBuyZar Team
-        </h2>
-        <p className="text-center text-gray-700 max-w-3xl mx-auto">
-          Meet the passionate individuals who are behind FreshBuyZar, working
-          tirelessly to bring you the freshest produce and a delightful grocery
-          delivery experience. Our team is dedicated to ensuring that you receive
-          top-quality, locally sourced produce delivered right to your doorstep,
-          making your life easier and healthier. We strive to foster a culture of
-          excellence and innovation, constantly seeking ways to improve our service
-          and exceed your expectations.
-        </p>
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16">
-          {team.map((member, index) => (
-            <div
-              key={index}
-              className="text-center bg-white rounded-lg shadow-lg p-6 border border-gray-200"
-            >
-              <Image
-                src={member.image}
-                alt={member.name}
-                width={200}
-                height={200}
-                className="rounded-full mx-auto mb-4"
-              />
-              <h3 className="text-lg font-semibold text-gray-900">{member.name}</h3>
-              <p className="text-gray-700 mb-4">{member.position}</p>
-              <div className="flex justify-center gap-4">
-                <a href={member.social.facebook} target="_blank" rel="noopener noreferrer">
-                  <Facebook className="text-blue-600" size={20} />
-                </a>
-                <a href={member.social.instagram} target="_blank" rel="noopener noreferrer">
-                  <Instagram className="text-pink-600" size={20} />
-                </a>
-                <a href={member.social.twitter} target="_blank" rel="noopener noreferrer">
-                  <Twitter className="text-blue-400" size={20} />
-                </a>
-              </div>
-            </div>
-          ))}
+      {/* Team Section */}
+      <section className="bg-green-50 py-12 md:py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-green-800 mb-6">Our Team</h2>
+          <h1 className="text-xl font-bold font-poppins text-center text-black mb-6">Meet Our Fresh Buyzar Team</h1>
+          <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12">
+            Meet the passionate individuals who are behind Fresh Buyzar, working tirelessly to bring you the freshest
+            produce and a delightful grocery delivery experience.
+          </p>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {team.map((member, index) => (
+              <Card key={index}>
+                <CardContent className="pt-4 text-center">
+                  <div className="w-56 h-36 rounded-xl bg-gray-200  mx-auto mb-4" />
+                  <h3 className="font-semibold mb-1">{member.name}</h3>
+                  <p className="text-sm text-gray-600 mb-4">{member.role}</p>
+                  <div className="flex justify-center gap-4">
+                    {member.social.map((platform, idx) => (
+                      <Button key={idx} variant="ghost" size="icon" className="h-8 w-8">
+                        {platform}
+                      </Button>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
-    </section>
+
+    </div>
   );
 };
 
 export default AboutUs;
+
