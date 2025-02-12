@@ -42,7 +42,7 @@ const ProductCard = ({ product }: { product: Product }) => {
   return (
     <div
       style={{ border: "1px solid rgb(34 197 93)" }}
-      className="bg-white rounded-2xl p-4 hover:shadow-lg transition relative w-full max-w-[300px] mx-auto">
+      className="bg-white rounded-2xl p-2 hover:shadow-lg transition relative w-full max-w-[300px] mx-auto">
 
       {/* Heart Button for Favorite */}
       <button
@@ -63,10 +63,10 @@ const ProductCard = ({ product }: { product: Product }) => {
 
       {/* Product Details */}
       <h2 className="text-sm font-semibold mt-2 truncate w-full font-poppins ">{product.name}</h2>
-      <p className="text-green-600 font-poppins font-bold mt-1">
+      <p className="text-black-600 font-poppins font-bold mt-1">
         ₹{product.price}
       </p>
-      <button className="mt-2 bg-green-500 text-white rounded-xl hover:bg-green-500 w-full p-2">
+      <button className="mt-4 bg-green-500  text-white rounded-xl hover:bg-green-500 w-full py-2 p-2 ">
         Add
       </button>    
     </div>
@@ -75,9 +75,9 @@ const ProductCard = ({ product }: { product: Product }) => {
 
 export const ProductGrid = () => {
   return (
-    <div className="p-4 bg-transparent flex flex-col items-center">
+    <div className="p-2 bg-transparent flex flex-col items-center">
       {/* Header Section */}
-      <div className="flex flex-wrap justify-between items-center text-center w-full sm:w-[80%] mb-10 px-2 sm:px-0">
+      <div className="flex flex-wrap justify-between items-center text-center w-full sm:w-[80%] mb-2 px-2 sm:px-0">
   {/* Heading */}
   <h1 className="text-xl sm:text-3xl font-bold text-[#11501D]">Farm Fresh</h1>
 
@@ -98,7 +98,7 @@ export const ProductGrid = () => {
 
 
       {/* Product Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-[80%] px-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:p-20 sm:p-2 lg:grid-cols-4 gap-8 w-[90%] ">
 
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />

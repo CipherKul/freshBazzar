@@ -11,8 +11,8 @@ const HeroSection = () => {
         }}
       >
         {/* Left Hero Image */}
-        <div className="absolute -bottom-2 sm:-bottom-16  md:-bottom-24  left-0 w-[40%] sm:w-[45%]">
-          {" "}
+        <div className="absolute -bottom-4 sm:-bottom-16  md:-bottom-24  left-0 w-[40%] sm:w-[45%]">
+          
           {/* Adjusted bottom positioning */}
           <Image
             src="/images/heroLeft.png"
@@ -25,12 +25,12 @@ const HeroSection = () => {
         </div>
 
         {/* Right Hero Image */}
-        <div className="absolute -bottom-12 sm:-bottom-30 md:-bottom-80 right-0 w-[40%] sm:w-[45%]">
+        <div className="absolute -bottom-16 sm:-bottom-30 md:-bottom-80 right-0 w-[40%] sm:w-[45%]">
           {" "}
           {/* Adjusted bottom positioning */}
           <Image
             src="/images/heroRight.png"
-            alt="Fresh fruits collection"
+            alt="Freh fruits collection"
             width={600}
             height={400}
             className="object-contain w-full h-auto"

@@ -117,25 +117,27 @@ const AboutUs: React.FC = () => {
      
       {/* Stats Section */}
       <div className="relative -mx-6 md:-mx-40 w-[calc(100%+3rem)] md:w-[calc(100%+20rem)] bg-green-100 mt-16">
-        <div className="py-24 md:py-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-green-800 font-semibold text-xl text-center max-w-7xl mx-auto px-6">
-            <div>
-              <p className="text-3xl font-bold">10k+</p>
-              <p>Fresh Deliveries</p>
-            </div>
-            <div>
-              <p className="text-3xl font-bold">234+</p>
-              <p>Produce Varieties</p>
-            </div>
-            <div>
-              <p className="text-3xl font-bold">12+</p>
-              <p>Community Engagements</p>
-            </div>
-            <div>
-              <p className="text-3xl font-bold">110+</p>
-              <p>Seasonal Recipes</p>
-            </div>
-          </div>
+        <div className="py-24 md:py-12 sm:py-6">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-green-800 font-semibold text-xl text-center max-w-7xl mx-auto px-6">
+  <div>
+    <p className="text-3xl font-bold">10k+</p>
+    <p>Fresh Deliveries</p>
+  </div>
+  <div>
+    <p className="text-3xl font-bold">234+</p>
+    <p>Produce Varieties</p>
+  </div>
+  {/* Hidden on sm but shown on larger screens */}
+  <div className="hidden sm:block">
+    <p className="text-3xl font-bold">12+</p>
+    <p>Community Engagements</p>
+  </div>
+  <div className="hidden sm:block">
+    <p className="text-3xl font-bold">110+</p>
+    <p>Seasonal Recipes</p>
+  </div>
+</div>
+
         </div>
       </div>
 
@@ -149,27 +151,39 @@ const AboutUs: React.FC = () => {
             Meet the passionate individuals who are behind Fresh Buyzar, working tirelessly to bring you the freshest
             produce and a delightful grocery delivery experience.
           </p>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {team.map((member, index) => (
-              <Card key={index}>
-                <CardContent className="pt-4 text-center">
-                  <div className="w-56 h-36 rounded-xl bg-gray-200  mx-auto mb-4" />
-                  <h3 className="font-semibold mb-1">{member.name}</h3>
-                  <p className="text-sm text-gray-600 mb-4">{member.role}</p>
-                  <div className="flex justify-center gap-4">
-                    {member.social.map((platform, idx) => (
-                      <Button key={idx} variant="ghost" size="icon" className="h-8 w-8">
-                        {platform}
-                      </Button>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+
+
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 gap-6">
+  {team.map((member, index) => (
+    <Card key={index} className="w-full">
+      <CardContent className="pt-4">
+        <div className="w-56 h-36  rounded-xl bg-gray-200 mx-auto mb-4" />
+        <h3 className="font-semibold mb-1">{member.name}</h3>
+        <p className="text-sm text-gray-600 mb-4">{member.role}</p>
+        <div className="gap-4">
+          {member.social.map((platform, idx) => (
+            <Button key={idx} variant="ghost" size="icon" className="h-8 w-8">
+              {platform}
+            </Button>
+          ))}
+        </div>
+      </CardContent>
+    </Card>
+  ))}
+</div>
+
+
+
+
+
+
         </div>
       </section>
-
+      <div className="container mx-auto px-4">
+      <h2 className="text-3xl font-bold text-center text-green-800 mb-6">About Us</h2>
+      <p className="text-center text-black-600 max-w-2xl mx-auto mb-12">Fresh Buyzar is a prefered farm fresh fruits & vegetbale store in Delhi NCR. </p>
+          
+        </div>
     </div>
   );
 };

@@ -20,14 +20,14 @@ const Navbar = () => {
       <div className="bg-green-900 text-white text-sm py-2">
         <div className="max-w-[1200px] mx-auto px-4 flex flex-col sm:flex-row justify-between items-center">
           <div className="flex flex-col sm:flex-row sm:gap-6 items-center mb-2 sm:mb-0">
-            <span className="flex items-center gap-2">
+            <span>
               <span>📞</span>
               <a href="tel:(629) 555-0129" className="hover:underline">
                 (629) 555-0129
               </a>
             </span>
             <span className="hidden sm:inline">|</span>
-            <span className="flex items-center gap-2">
+            <span>
               <span>✉️</span>
               <a href="mailto:PRNKinfo@company.com" className="hover:underline">
                 PRNKinfo@company.com
@@ -38,7 +38,7 @@ const Navbar = () => {
       </div>
 
       {/* Main Navigation */}
-      <nav className="bg-white text-black border-b">
+      <nav className=" bg-[#F9F6F0] text-black ">
         <div className="max-w-[1200px] mx-auto px-4 py-3">
           <div className="flex items-center justify-between gap-4">
             {/* Logo */}
@@ -72,7 +72,7 @@ const Navbar = () => {
 
             {/* Cart and Login/Account Button */}
             <div className="flex items-center rounded-2xl gap-2 sm:gap-4">
-              <Button variant="ghost" className="p-1 sm:p-2">
+              <Button variant="ghost" className="p-1 sm:p-2w-12 hover:bg-green-500 h-6 sm:w-8 sm:h-8">
                 <Image
                   src="/images/cart.png"
                   alt="Shopping Cart"
